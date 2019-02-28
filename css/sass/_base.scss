@@ -1,0 +1,109 @@
+.container {
+    position: relative;
+    max-width: 1620px;
+    height: 100%;
+    margin: 0 auto;
+}
+.wrapper {
+    position: relative;
+}
+
+.cf {
+    @include clearfix;
+}
+.parallax-container {
+    min-height: 30vh;
+    background: linear-gradient(45deg, #fff, #fff 60%, transparent);
+}
+
+.overlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#header {
+    
+    padding: 25px 25px 15px;
+    height: 30vh;
+    &.sticky {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        height: 75px;
+        opacity: 0.9;
+    }
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 200px;
+    height: 70px;
+    background: #5b5bcc;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 28px;
+    @include monts-bold;
+}
+
+.slicknav_menu {
+    display: none;
+}
+
+#main-nav {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    ul {
+        list-style: none;
+        li {
+            float: left;
+            margin-right: 15px;
+            > a {
+                @include lato-bold;
+                font-size: 22px;
+                padding: 15px 25px;
+                position: relative;
+                
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 5px;
+                    background: blue;
+                    position: absolute;
+                    bottom: -15px;
+                    left: 0;
+                    transform: rotateY(90deg);
+                    @include transition(all);
+                }
+                &:hover {
+                    &:after {
+                        transform: rotateY(0deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slide {
+    li {
+        height: 60vh;
+    }
+}
+
+#services {
+    background: #cecece;
+}
+.serviceWrap {
+    
+}
+.serviceWrap img {
+    width: 300px;
+    height: auto;
+}

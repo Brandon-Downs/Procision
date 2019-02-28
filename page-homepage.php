@@ -28,11 +28,11 @@ $page = $wp_query->post->ID;
                 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
                 $full_url = $url;
                 ?>
-                    <li style="background-image: url(<?php echo $full_url; ?>); background-size: cover;">
-                        <?php //the_post_thumbnail('slide'); ?>
+                    <li class="wrapper" style="background-image: url(<?php echo $full_url; ?>); background-size: cover;">
                         <div id="sliderText">
                             <h2><?php the_title(); ?></h2>   
                         </div>
+                        <div class="overlay"></div>
                     </li>
                 <?php endforeach; ?>
                 <?php wp_reset_postdata(); ?>

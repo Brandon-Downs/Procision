@@ -1,0 +1,82 @@
+@mixin clearfix {
+	&:before,
+	&:after {
+	    content: "";
+	    display: table;
+	}
+
+	&:after {
+	    clear: both;
+	}
+
+	/* For IE 6/7 (trigger hasLayout) */
+	*zoom: 1;
+}
+
+// transition
+@mixin transition($property) {
+	-webkit-transition: $property .15s;
+    -moz-transition: $property .15s;
+    transition: $property .15s;
+}
+
+// border radius
+@mixin border-radius($size) {
+	-moz-border-radius: $size;
+	-khtml-border-radius: $size;
+	-webkit-border-radius: $size;
+	border-radius: $size;
+}
+
+// generic transform
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($x, $y) {
+    @include transform(rotate(#{$x}deg, #{$y}deg));
+}
+
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+
+
+
+/********************************* Font mixins
+**********************************************/
+
+
+
+
+@mixin monts-semi-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+@mixin monts-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+@mixin monts-extra-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+@mixin lato-regular {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+@mixin lato-bold {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}

@@ -1,10 +1,156 @@
-/*
-Theme Name: Procision Sound
-Theme URI: 
-Author: Brandon Downs
-Author URI: 
-Description: Its a site, with sights aannd not yet sounds but open your ears because dmx sings rudolph the rednose reindeer to your left.
-Version: 1.0
-Tags: 
-*/
+/* line 1, css/sass/_reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
 
+/* line 8, css/sass/_reset.scss */
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+/********************************* Font mixins
+**********************************************/
+/* line 1, css/sass/_base.scss */
+.container {
+  position: relative;
+  max-width: 1620px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 7, css/sass/_base.scss */
+.wrapper {
+  position: relative;
+}
+
+/* line 11, css/sass/_base.scss */
+.cf {
+  /* For IE 6/7 (trigger hasLayout) */
+  *zoom: 1;
+}
+/* line 2, css/sass/_mixin.scss */
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+/* line 8, css/sass/_mixin.scss */
+.cf:after {
+  clear: both;
+}
+
+/* line 14, css/sass/_base.scss */
+.parallax-container {
+  min-height: 30vh;
+  background: linear-gradient(45deg, #fff, #fff 60%, transparent);
+}
+
+/* line 19, css/sass/_base.scss */
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* line 25, css/sass/_base.scss */
+#header {
+  padding: 25px 25px 15px;
+  height: 30vh;
+}
+/* line 29, css/sass/_base.scss */
+#header.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 75px;
+  opacity: 0.9;
+}
+
+/* line 39, css/sass/_base.scss */
+#logo {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 200px;
+  height: 70px;
+  background: #5b5bcc;
+  margin-bottom: 25px;
+}
+
+/* line 49, css/sass/_base.scss */
+h1 {
+  font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* line 54, css/sass/_base.scss */
+.slicknav_menu {
+  display: none;
+}
+
+/* line 58, css/sass/_base.scss */
+#main-nav {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+}
+/* line 62, css/sass/_base.scss */
+#main-nav ul {
+  list-style: none;
+}
+/* line 64, css/sass/_base.scss */
+#main-nav ul li {
+  float: left;
+  margin-right: 15px;
+}
+/* line 67, css/sass/_base.scss */
+#main-nav ul li > a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 15px 25px;
+  position: relative;
+}
+/* line 73, css/sass/_base.scss */
+#main-nav ul li > a:after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  background: blue;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  transform: rotateY(90deg);
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  transition: all 0.15s;
+}
+/* line 85, css/sass/_base.scss */
+#main-nav ul li > a:hover:after {
+  transform: rotateY(0deg);
+}
+
+/* line 95, css/sass/_base.scss */
+.slide li {
+  height: 60vh;
+}
+
+/* line 100, css/sass/_base.scss */
+#services {
+  background: #cecece;
+}
+
+/* line 106, css/sass/_base.scss */
+.serviceWrap img {
+  width: 300px;
+  height: auto;
+}
