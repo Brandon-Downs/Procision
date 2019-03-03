@@ -114,6 +114,35 @@
 
     border: 1px solid transparent;
 }
-.slick-arrow.slick-hidden, .slick-arrow {
-    display: none !important;
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.slick-arrow {
+    font-size: 70px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.heroNext {
+    right: 7%;
+}
+.heroPrev {
+    left: 7%;
+}
+.heroNext:before {
+    font-family: FontAwesome;
+    content: "\f105";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+.heroPrev:before {
+    font-family: FontAwesome;
+    content: "\f104";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
 }

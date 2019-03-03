@@ -1,34 +1,128 @@
 /* line 1, css/sass/_reset.scss */
+html {
+  scroll-behavior: smooth;
+}
+
+/* line 4, css/sass/_reset.scss */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background: transparent;
+  color: #333;
 }
 
-/* line 8, css/sass/_reset.scss */
+/* line 12, css/sass/_reset.scss */
 a {
   display: block;
   text-decoration: none;
   color: #333;
 }
 
+/* line 19, css/sass/_reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 23, css/sass/_reset.scss */
+::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+/* Chrome <=56, Safari < 10 */
+/* line 24, css/sass/_reset.scss */
+:-moz-placeholder {
+  opacity: 1;
+  -moz-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+/* FF 4-18 */
+/* line 25, css/sass/_reset.scss */
+::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+/* FF 19-51 */
+/* line 26, css/sass/_reset.scss */
+:-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+/* IE 10+ */
+/* line 27, css/sass/_reset.scss */
+::placeholder {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+/* Modern Browsers */
+/* line 29, css/sass/_reset.scss */
+*:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+/* Chrome <=56, Safari < 10 */
+/* line 30, css/sass/_reset.scss */
+*:focus:-moz-placeholder {
+  opacity: 0;
+}
+
+/* FF 4-18 */
+/* line 31, css/sass/_reset.scss */
+*:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+/* FF 19-50 */
+/* line 32, css/sass/_reset.scss */
+*:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+/* IE 10+ */
+/* line 33, css/sass/_reset.scss */
+*:focus::placeholder {
+  opacity: 0;
+}
+
+/* Modern Browsers */
 /********************************* Font mixins
 **********************************************/
 /* line 1, css/sass/_base.scss */
+#main {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 7, css/sass/_base.scss */
 .container {
+  padding: 0 15px;
   position: relative;
   max-width: 1620px;
   height: 100%;
   margin: 0 auto;
 }
 
-/* line 7, css/sass/_base.scss */
+/* line 14, css/sass/_base.scss */
 .wrapper {
   position: relative;
 }
 
-/* line 11, css/sass/_base.scss */
+/* line 17, css/sass/_base.scss */
+.fixedWrapper {
+  position: fixed;
+  width: 100%;
+}
+
+/* line 22, css/sass/_base.scss */
 .cf {
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
@@ -43,13 +137,13 @@ a {
   clear: both;
 }
 
-/* line 14, css/sass/_base.scss */
+/* line 25, css/sass/_base.scss */
 .parallax-container {
-  min-height: 30vh;
+  min-height: 500px;
   background: linear-gradient(45deg, #fff, #fff 60%, transparent);
 }
 
-/* line 19, css/sass/_base.scss */
+/* line 30, css/sass/_base.scss */
 .overlay {
   position: absolute;
   top: 0;
@@ -59,98 +153,302 @@ a {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/* line 25, css/sass/_base.scss */
-#header {
-  padding: 25px 25px 15px;
-  height: 30vh;
-}
-/* line 29, css/sass/_base.scss */
-#header.sticky {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  height: 75px;
-  opacity: 0.9;
+/* line 36, css/sass/_base.scss */
+a.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  padding: 10px 60px;
+  font-size: 24px;
+  border: 1px solid;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-/* line 39, css/sass/_base.scss */
+/* line 47, css/sass/_base.scss */
+#mastHead {
+  padding: 433px 0 15px;
+  height: 500px;
+  position: relative;
+}
+
+/* line 53, css/sass/_base.scss */
 #logo {
-  position: absolute;
-  top: 0;
-  left: 25px;
+  position: fixed;
+  top: 25px;
+  left: 10%;
   width: 200px;
   height: 70px;
   background: #5b5bcc;
   margin-bottom: 25px;
 }
 
-/* line 49, css/sass/_base.scss */
+/* line 62, css/sass/_base.scss */
+.stickyLogo {
+  width: 50px;
+  height: 50px;
+  background: blue;
+  position: absolute;
+  bottom: 9px;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s;
+  -moz-transition: opacity 0.15s;
+  transition: opacity 0.15s;
+}
+
+/* line 73, css/sass/_base.scss */
 h1 {
   font-size: 28px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
-/* line 54, css/sass/_base.scss */
+/* line 77, css/sass/_base.scss */
+.searchWrapper {
+  top: 350px;
+}
+/* line 79, css/sass/_base.scss */
+.searchWrapper button {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  font-size: 22px;
+  transform: rotateY(180deg);
+  padding: 7px 24px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+/* line 90, css/sass/_base.scss */
+#cta,
+#tag,
+.search-form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* line 96, css/sass/_base.scss */
+.search-form {
+  padding-left: 80px;
+}
+
+/* line 100, css/sass/_base.scss */
+#tag h2 {
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* line 105, css/sass/_base.scss */
+.search-field {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 7px 12px;
+  -webkit-transition: border-bottom 0.15s;
+  -moz-transition: border-bottom 0.15s;
+  transition: border-bottom 0.15s;
+}
+/* line 111, css/sass/_base.scss */
+.search-field:focus {
+  outline: none;
+  border-bottom: 1px solid #333;
+}
+/* line 115, css/sass/_base.scss */
+.search-field::placeholder {
+  color: #333;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* line 122, css/sass/_base.scss */
+.tagWrapper {
+  top: 150px;
+}
+
+/* line 125, css/sass/_base.scss */
+.ctaWrapper {
+  top: 250px;
+}
+
+/* line 130, css/sass/_base.scss */
 .slicknav_menu {
   display: none;
 }
 
-/* line 58, css/sass/_base.scss */
+/* line 134, css/sass/_base.scss */
 #main-nav {
-  position: absolute;
-  bottom: 0;
-  left: 50px;
+  background: #fff;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 4;
 }
-/* line 62, css/sass/_base.scss */
-#main-nav ul {
-  list-style: none;
+
+/* line 141, css/sass/_base.scss */
+.menu-header {
+  margin-left: 0;
+  -webkit-transition: margin-left 0.15s;
+  -moz-transition: margin-left 0.15s;
+  transition: margin-left 0.15s;
+  transition-delay: .2s;
 }
-/* line 64, css/sass/_base.scss */
-#main-nav ul li {
+/* line 145, css/sass/_base.scss */
+.menu-header li {
   float: left;
   margin-right: 15px;
 }
-/* line 67, css/sass/_base.scss */
-#main-nav ul li > a {
+/* line 148, css/sass/_base.scss */
+.menu-header li > a {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 22px;
-  padding: 15px 25px;
+  padding: 20px 25px;
   position: relative;
 }
-/* line 73, css/sass/_base.scss */
-#main-nav ul li > a:after {
+/* line 153, css/sass/_base.scss */
+.menu-header li > a:after {
   content: '';
   width: 100%;
   height: 5px;
   background: blue;
   position: absolute;
-  bottom: -15px;
+  bottom: 0;
   left: 0;
   transform: rotateY(90deg);
   -webkit-transition: all 0.15s;
   -moz-transition: all 0.15s;
   transition: all 0.15s;
 }
-/* line 85, css/sass/_base.scss */
-#main-nav ul li > a:hover:after {
+/* line 165, css/sass/_base.scss */
+.menu-header li > a:hover:after {
   transform: rotateY(0deg);
 }
-
-/* line 95, css/sass/_base.scss */
-.slide li {
-  height: 60vh;
+/* line 170, css/sass/_base.scss */
+.menu-header li:last-child {
+  visibility: hidden;
 }
 
-/* line 100, css/sass/_base.scss */
+/* line 175, css/sass/_base.scss */
+.sticky {
+  position: fixed !important;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+}
+/* line 181, css/sass/_base.scss */
+.sticky .stickyLogo {
+  opacity: 1;
+  transition-delay: .2s;
+}
+/* line 185, css/sass/_base.scss */
+.sticky .menu-header {
+  margin-left: 75px;
+  transition-delay: 0s;
+}
+/* line 189, css/sass/_base.scss */
+.sticky .menu-header li:last-child {
+  visibility: visible;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-top: 11px;
+}
+/* line 194, css/sass/_base.scss */
+.sticky .menu-header li:last-child a {
+  padding: 8px 30px;
+}
+
+/* line 202, css/sass/_base.scss */
+.slide li {
+  height: 450px;
+}
+
+/* line 207, css/sass/_base.scss */
+.halfBox {
+  width: 50%;
+  float: left;
+}
+
+/* line 211, css/sass/_base.scss */
+.halfBoxWrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 216, css/sass/_base.scss */
+#mission {
+  text-align: center;
+  z-index: 4;
+}
+
+/* line 221, css/sass/_base.scss */
+#mission,
+#services,
+#about {
+  padding: 100px 15px;
+}
+
+/* line 226, css/sass/_base.scss */
 #services {
   background: #cecece;
 }
 
-/* line 106, css/sass/_base.scss */
+/* line 229, css/sass/_base.scss */
+.serviceWrap {
+  text-align: center;
+}
+
+/* line 232, css/sass/_base.scss */
 .serviceWrap img {
-  width: 300px;
+  width: 500px;
   height: auto;
+}
+
+/* line 238, css/sass/_base.scss */
+.serviceWrap {
+  text-align: center;
+}
+
+/* line 241, css/sass/_base.scss */
+.box {
+  width: 32%;
+  display: inline-block;
+}
+
+/* line 245, css/sass/_base.scss */
+.boxWrap {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+/* line 251, css/sass/_base.scss */
+.boxWrap a {
+  display: block;
+}
+/* line 253, css/sass/_base.scss */
+.boxWrap a img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 265, css/sass/_base.scss */
+.three-by-two.aspect-ratio {
+  padding-bottom: 66.666%;
+}
+
+/* line 266, css/sass/_base.scss */
+.text {
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 14px;
 }

@@ -1,5 +1,20 @@
 
 jQuery(document).ready(function($) {
+    
+    
+    
+    var  mn = $("#main-nav");
+    mns = "sticky";
+    hdr = $('header').height();
+    var stickyOffset = $('#main-nav').offset().top;
+    
+    $(window).scroll(function() {
+      if( $(this).scrollTop() > stickyOffset ) {
+        mn.addClass(mns);
+      } else {
+        mn.removeClass(mns);
+      }
+    });
 
     $('#main-nav .menu').slicknav({
         label: '',
@@ -12,7 +27,8 @@ jQuery(document).ready(function($) {
     
     
     $('.slide').slick({
-        
+        prevArrow: '<div class="heroPrev"></div>',
+        nextArrow: '<div class="heroNext"></div>'
     });
     
      $(window).on('resize scroll', function(){
@@ -20,24 +36,4 @@ jQuery(document).ready(function($) {
         $('.slicknav_nav').height($(window).height());
     });
     
-    $('body').scroll(function(){
-		stickyHeaderCheck();
-	});
-    
-    stickyHeaderCheck();
-    
 });
-
-function stickyHeaderCheck() {
-  var header = $("#header");
-
-  if($('body').scrollTop() > 1) { 
-      if(!header.hasClass("sticky")){
-          header.addClass("sticky");
-      }
-  } else {
-      if(header.hasClass("sticky")){
-          header.removeClass("sticky");
-      }
-  }
-}
