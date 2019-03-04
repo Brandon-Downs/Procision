@@ -27,11 +27,19 @@
         <nav id="main-nav">
             <div class="container">
                 <div class="stickyLogo"></div>
+                <?php if(is_front_page()): ?>
                 <?php wp_nav_menu(array( 
                     'container_class' => 'menu-header', 
                     'theme_location' => 'header-menu', 
                     'menu_class' => 'menu cf'
                 )); ?>
+                <?php else: ?>
+                <?php wp_nav_menu(array( 
+                    'container_class' => 'menu-header', 
+                    'theme_location' => 'secondary-menu', 
+                    'menu_class' => 'menu cf'
+                )); ?>
+                <?php endif; ?>
             </div>    
         </nav>
     </header>
