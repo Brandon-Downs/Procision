@@ -1,271 +1,82 @@
-#main {
-    background: #fff;
-    position: relative;
-    z-index: 1;
-    
+
+.cf {
+    @include clearfix; //Defined in variables.scss
 }
 .container {
     padding: 0 15px;
     position: relative;
-    max-width: 1620px;
-    height: 100%;
-    margin: 0 auto;
-}
-.wrapper {
-    position: relative;
-}
-.fixedWrapper {
-    position: fixed;
     width: 100%;
-}
-
-.cf {
-    @include clearfix;
-}
-.parallax-container {
-    min-height: 500px;
-    background: linear-gradient(45deg, #fff, #fff 60%, transparent);
-}
-
-.overlay {
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background: rgba(255, 255, 255, 0.9);
-}
-
-a.btn {
-    @include monts-bold;
-    display: inline-block;
-    padding: 10px 60px;
-    font-size: 24px;
-    border: 1px solid;
-    border-radius: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 #mastHead {
-    padding: 433px 0 15px;
-    height: 500px;
-    position: relative;
+    padding: 25px 0;
 }
-
 #logo {
-    position: fixed;
-    top: 25px;
-    left: 10%;
-    width: 200px;
-    height: 70px;
-    background: #5b5bcc;
-    margin-bottom: 25px;
-}
-.stickyLogo {
-    width: 50px;
-    height: 50px;
-    background: blue;
-    position: absolute;
-    bottom: 9px;
-    opacity: 0;
-    @include transition(opacity);
-    
-}
-
-h1 {
-    font-size: 28px;
-    @include monts-bold;
-}
-.searchWrapper {
-    top: 350px;
-    button {
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        font-size: 22px;
-        transform: rotateY(180deg);
-        padding: 7px 24px;
-        border: 1px solid;
-        border-radius: 5px;
-    }
-}
-#cta,
-#tag,
-.search-form {
-    width: 70%;
-    margin: 0 auto;
-}
-.search-form {
-    padding-left: 80px;
-}
-#tag {
-    h2 {
-        font-size: 30px;
-        @include monts-semi-bold;
-    }
-}
-.search-field {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid transparent;
-    padding: 7px 12px;
-    @include transition(border-bottom);
-    &:focus {
-        outline: none;
-        border-bottom: 1px solid #333;
-    }
-    &::placeholder {
-        color: #333;
-        font-size: 24px;
-        @include monts-semi-bold;
-    }
-}
-
-.tagWrapper {
-    top: 150px;
-}
-.ctaWrapper {
-    top: 250px;
-}
-
-
-.slicknav_menu {
-    display: none;
+    float: left;
 }
 
 #main-nav {
-    background: #fff;
-    box-shadow: 0 -2px 15px rgba(0,0,0, .3);
-    position: relative;
-    z-index: 4;
-    
-}
-.menu-header {
-    margin-left: 0;
-    @include transition(margin-left);
-    transition-delay: .2s;
+    float: right;
     li {
         float: left;
-        margin-right: 15px;
-        > a {
-            @include lato-bold;
-            font-size: 22px;
-            padding: 20px 25px;
-            position: relative;
+        a {
+            padding: 5px 15px;
+            font-weight: 600;
+            font-size: 24px;
+            @include transition(color);
+            
+            &:hover,
+            &:active {
+                color: #49999D;
+            }
+        }
+    }
+}
+
+#main {
+    height: 100vh;
+}
+
+#secondaryNav {
+    float: right;
+    margin: 150px 0 50px;
+    li {
+        float: left;
+        a {
+            padding: 5px 15px;
+            font-weight: 600;
+            font-size: 24px;
+            color: #fff;
             &:after {
                 content: '';
-                width: 100%;
-                height: 5px;
-                background: blue;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                transform: rotateY(90deg);
-                @include transition(all);
+                background: "url(<?php the_field('logo_shape', 'options'); ?>)";
+                
             }
-            &:hover {
-                &:after {
-                    transform: rotateY(0deg);
-                }
-            }
-        }
-        &:last-child {
-            visibility: hidden;
         }
     }
 }
-.sticky {
-    position: fixed !important;
+
+.CTA {
+    a {
+        color: #fff;
+        font-size: 30px;
+        padding: 15px 25px;
+        border: 1px solid #fff;
+        display: inline-block;
+        margin: 0 auto;
+    }
+}
+
+
+footer {
+    background: #000;
+    padding: 25px 0;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    top: 0;
-    z-index: 10;
-    background: #fff;
-    .stickyLogo {
-        opacity: 1;
-        transition-delay: .2s;
-    }
-    .menu-header {
-        margin-left: 75px;
-        transition-delay: 0s;
-        li {
-            &:last-child {
-                visibility: visible;
-                border: 1px solid;
-                border-radius: 5px;
-                margin-top: 11px;
-                a {
-                    padding: 8px 30px;
-                }
-            }
-        }
-    }
 }
-.slide {
-    li {
-        height: 450px;
-    }
-}
-
-.halfBox {
-    width: 50%;
-    float: left;
-}
-.halfBoxWrap {
-    width: 80%;
-    margin: 0 auto;
-}
-
-#mission {
-    text-align: center;
-    z-index: 4;
-}
-
-#mission,
-#services,
-#about {
-    padding: 100px 15px;
-}
-#services {
-    background: #cecece;
-}
-.serviceWrap {
-    text-align: center;
-}
-.serviceWrap img {
-    width: 500px;
-    height: auto;
-}
-
-
-.serviceWrap {
-  text-align: center;
-}
-.box {
-  width: 32%;
-  display: inline-block;
-}
-.boxWrap {
-  margin: 0 auto;
-  position: relative;
-	width: 100%;
-  max-width: 500px;
-  overflow: hidden;
-  a {
-    display: block;
-    img {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      // top: 0;
-      // left: 0;
-    }
-  }
-}
-
-.three-by-two.aspect-ratio { padding-bottom: 66.666% }
-.text {
-  text-align: left;
-  position: absolute;
-  bottom: 0;  left: 0;  right: 0;
-	padding: 0 14px;
+#footLogo {
+    float: right;
 }

@@ -146,3 +146,7 @@
     vertical-align: middle;
     font-weight: 900;
 }
+
+.slicknav_menu {
+    display: none;
+}

@@ -26,10 +26,10 @@ jQuery(document).ready(function($) {
     });
     
     
-    $('.slide').slick({
-        prevArrow: '<div class="heroPrev"></div>',
-        nextArrow: '<div class="heroNext"></div>'
-    });
+//    $('.slide').slick({
+//        prevArrow: '<div class="heroPrev"></div>',
+//        nextArrow: '<div class="heroNext"></div>'
+//    });
     
      $(window).on('resize scroll', function(){
         $('.slicknav_nav').width($(window).width());
