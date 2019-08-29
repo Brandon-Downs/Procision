@@ -7,7 +7,7 @@
     //add_image_size('page-single', 350, 350, true);
 	add_image_size('recent_posts_widget', 100, 100, true);
     add_image_size('customer-logo', 150, 100, true);
-    add_image_size('banner', 1920, 650, true);
+    add_image_size('banner', 1600, 600, true);
     add_image_size('services', 370, 260, true);
     add_image_size('logo', 250, 250, true);
     add_image_size('logo-shape', 50, 50, true);

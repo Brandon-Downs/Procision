@@ -6,25 +6,31 @@
     padding: 0 15px;
     position: relative;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1160px;
     margin: 0 auto;
 }
 
 #mastHead {
-    padding: 25px 0;
+    padding: 15px 0 8px;
 }
 #logo {
     float: left;
+    img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
 }
 
 #main-nav {
     float: right;
+    padding-top: 6px;
     li {
         float: left;
         a {
             padding: 5px 15px;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 20px;
             @include transition(color);
             
             &:hover,
@@ -36,29 +42,60 @@
 }
 
 #main {
-    height: 100vh;
+    padding-top: 45px;
 }
 
-#secondaryNav {
-    float: right;
-    margin: 150px 0 50px;
-    li {
+.secondaryNav {
+    padding-top: 50px;
+    margin: 0 auto 50px;
+    width: 85%;
+    a {
+        display: block;
         float: left;
-        a {
-            padding: 5px 15px;
+        width: 30%;
+        margin: 0 1.66%;
+        border: 1px solid;
+        border-radius: 5px;
+        text-align: center;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        h3 {
+            padding: 45px 15px;
             font-weight: 600;
             font-size: 24px;
             color: #fff;
-            &:after {
-                content: '';
-                background: "url(<?php the_field('logo_shape', 'options'); ?>)";
-                
-            }
+            
+        }
+        &:active,
+        &:hover {
+            background: rgba(73, 153, 157, 1);
         }
     }
 }
 
+.services {
+    .sidebar {
+        box-sizing: border-box;
+        width: 25%;
+        float: left;
+        .secondaryNav{
+            a {
+                float: none;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+        }
+    }
+    .statementBlock {
+        float: left;
+        width: 75%;
+        max-width: 75%;
+        box-sizing: border-box;
+    }
+}
+
 .CTA {
+    margin-bottom: 75px;
     a {
         color: #fff;
         font-size: 30px;
@@ -69,12 +106,52 @@
     }
 }
 
+.statementBlock {
+    background: rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 50px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+    p {
+        color: #fff;
+        font-size: 27px;
+        font-weight: 400;
+        line-height: 35px;
+    }
+}
+
+.interiorHeader {
+    height: 250px;
+    position: relative;
+    margin-bottom: 50px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 40px;
+        font-weight: 400;
+        
+    }
+}
+
+.pageContent {
+    width: 100%;
+    max-width: 900px;
+    padding: 50px 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 
 footer {
     background: #000;
     padding: 25px 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 #footLogo {

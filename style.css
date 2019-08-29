@@ -116,70 +116,109 @@ ul {
   padding: 0 15px;
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
 /* line 13, css/sass/_base.scss */
 #mastHead {
-  padding: 25px 0;
+  padding: 15px 0 8px;
 }
 
 /* line 16, css/sass/_base.scss */
 #logo {
   float: left;
 }
+/* line 18, css/sass/_base.scss */
+#logo img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
 
-/* line 20, css/sass/_base.scss */
+/* line 25, css/sass/_base.scss */
 #main-nav {
   float: right;
+  padding-top: 6px;
 }
-/* line 22, css/sass/_base.scss */
+/* line 28, css/sass/_base.scss */
 #main-nav li {
   float: left;
 }
-/* line 24, css/sass/_base.scss */
+/* line 30, css/sass/_base.scss */
 #main-nav li a {
   padding: 5px 15px;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   -webkit-transition: color 0.15s;
   -moz-transition: color 0.15s;
   transition: color 0.15s;
 }
-/* line 30, css/sass/_base.scss */
+/* line 36, css/sass/_base.scss */
 #main-nav li a:hover, #main-nav li a:active {
   color: #49999D;
 }
 
-/* line 38, css/sass/_base.scss */
+/* line 44, css/sass/_base.scss */
 #main {
-  height: 100vh;
+  padding-top: 45px;
 }
 
-/* line 42, css/sass/_base.scss */
-#secondaryNav {
-  float: right;
-  margin: 150px 0 50px;
+/* line 48, css/sass/_base.scss */
+.secondaryNav {
+  padding-top: 50px;
+  margin: 0 auto 50px;
+  width: 85%;
 }
-/* line 45, css/sass/_base.scss */
-#secondaryNav li {
+/* line 52, css/sass/_base.scss */
+.secondaryNav a {
+  display: block;
   float: left;
+  width: 30%;
+  margin: 0 1.66%;
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
-/* line 47, css/sass/_base.scss */
-#secondaryNav li a {
-  padding: 5px 15px;
+/* line 62, css/sass/_base.scss */
+.secondaryNav a h3 {
+  padding: 45px 15px;
   font-weight: 600;
   font-size: 24px;
   color: #fff;
 }
-/* line 52, css/sass/_base.scss */
-#secondaryNav li a:after {
-  content: '';
-  background: "url(<?php the_field('logo_shape', 'options'); ?>)";
+/* line 69, css/sass/_base.scss */
+.secondaryNav a:active, .secondaryNav a:hover {
+  background: #49999d;
 }
 
-/* line 62, css/sass/_base.scss */
+/* line 77, css/sass/_base.scss */
+.services .sidebar {
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+}
+/* line 82, css/sass/_base.scss */
+.services .sidebar .secondaryNav a {
+  float: none;
+  margin-bottom: 15px;
+  width: 100%;
+}
+/* line 89, css/sass/_base.scss */
+.services .statementBlock {
+  float: left;
+  width: 75%;
+  max-width: 75%;
+  box-sizing: border-box;
+}
+
+/* line 97, css/sass/_base.scss */
+.CTA {
+  margin-bottom: 75px;
+}
+/* line 99, css/sass/_base.scss */
 .CTA a {
   color: #fff;
   font-size: 30px;
@@ -189,16 +228,60 @@ ul {
   margin: 0 auto;
 }
 
-/* line 73, css/sass/_base.scss */
+/* line 109, css/sass/_base.scss */
+.statementBlock {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 50px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+/* line 117, css/sass/_base.scss */
+.statementBlock p {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+/* line 125, css/sass/_base.scss */
+.interiorHeader {
+  height: 250px;
+  position: relative;
+  margin-bottom: 50px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+/* line 131, css/sass/_base.scss */
+.interiorHeader h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+/* line 143, css/sass/_base.scss */
+.pageContent {
+  width: 100%;
+  max-width: 900px;
+  padding: 50px 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 152, css/sass/_base.scss */
 footer {
   background: #000;
   padding: 25px 0;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 
-/* line 80, css/sass/_base.scss */
+/* line 157, css/sass/_base.scss */
 #footLogo {
   float: right;
 }

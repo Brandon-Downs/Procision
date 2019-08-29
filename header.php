@@ -10,12 +10,21 @@
     <?php wp_head(); ?>
 </head>
     
-<body>
+<?php $body_classes = join( ' ', get_body_class() ); ?>
+<!--[if lt IE 7 ]><body class="ie6 <?php echo $body_classes; ?>"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 <?php echo $body_classes; ?>"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 <?php echo $body_classes; ?>"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 <?php echo $body_classes; ?>"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><body class="<?php echo $body_classes; ?>"><!--<![endif]-->
+    
+
     <header id="mastHead"> 
         <div class="container cf">
             <?php if(get_field('logo', 'options')): ?>
                 <div id="logo">
-                    <h1><?php echo wp_get_attachment_image(get_field('logo', 'options'), 'logo'); ?></h1>
+                    <a href="<?php bloginfo('url'); ?>">
+                        <h1><?php echo wp_get_attachment_image(get_field('logo', 'options'), 'logo'); ?></h1>
+                    </a>
                 </div>
             <?php endif; ?>
             
@@ -31,5 +40,5 @@
         </div>
     </header>
     
-    <div id="main" style="background: linear-gradient(rgba(105, 72, 78, 0.52), rgb(86, 20, 24)), url(<?php the_field('homepage_background_image', 'options'); ?>) no-repeat center; background-size: cover;">
+    
     
